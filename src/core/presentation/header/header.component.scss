@@ -1,0 +1,39 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.header {
+  background-color: white;
+  color: black;
+  justify-content: space-between;
+
+  &__userInformation {
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    &--circle {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: dodgerblue;
+      color: white;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--email {
+      h4 {
+        margin: 0;
+      }
+    }
+
+    &--arrow {
+      cursor: pointer;
+    }
+  }
+}
+
+mat-icon {
+  color: #E5008F !important;
+}

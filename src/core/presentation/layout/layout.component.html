@@ -1,0 +1,13 @@
+<mat-sidenav-container class="sidenav">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" class="sidenav__sidebar">
+    <img src="/assets/img/angular_logo.png" height="100" (click)="goHome()"/>
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav__content">
+    <app-header (toggleEmitter)="onToggle()"></app-header>
+    <main class="main">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

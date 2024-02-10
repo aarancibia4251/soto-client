@@ -1,0 +1,24 @@
+<div class="login flex-column">
+  <h1 class="login__title">Inicia sesión</h1>
+  <div class="login__form flex-column">
+    <mat-form-field appearance="fill">
+      <mat-label>Usuario</mat-label>
+      <input matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input matInput type="password" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Proveedor</mat-label>
+      <mat-select>
+        <mat-option value="one">Viajes</mat-option>
+        <mat-option value="two">Vuelos</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button class="login__form--button" (click)="onLogin()">Login</button>
+  </div>
+  <a routerLink="#"><small>Forgot password?</small></a>
+  <p class="text-muted text-center"><small>Do not have an account?</small></p>
+  <button mat-raised-button class="text-muted">Crear cuenta</button>
+</div>

@@ -1,0 +1,21 @@
+<mat-nav-list >
+  <mat-expansion-panel *ngFor="let menu of menus; let i = index" class="mat-expansion-panel-container" hideToggle><!-- [expanded]="i === 0" -->
+    <mat-expansion-panel-header class="mat-expansion-panel-header" [ngClass]="menu.active ? 'panel-header-active' : ''">
+      <mat-panel-title class="mat-panel-title">
+        <img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"> <span class="white"> {{ menu.name }} </span>
+      </mat-panel-title>
+      <mat-panel-description *ngIf="menu.subMenus?.length">
+        <mat-icon *ngIf="menu.open">keyboard_arrow_up</mat-icon>
+        <mat-icon *ngIf="!menu.open">keyboard_arrow_down</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <dl class="submenu" >
+      <dt *ngFor="let subMenu of menu.subMenus"
+          class="mat-panel-title">
+        <a [routerLink]="subMenu.route" routerLinkActive="is-active">
+          <!-- (click)="onSidenavClose(subModule.ruta)" -->
+        {{ subMenu.name }}
+      </a></dt>
+    </dl>
+  </mat-expansion-panel>
+</mat-nav-list>

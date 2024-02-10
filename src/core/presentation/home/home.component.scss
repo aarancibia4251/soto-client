@@ -1,0 +1,15 @@
+.home {
+
+  &__menus {
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+
+
+    &--menu {
+      width: 350px;
+    }
+  }
+
+}
